@@ -52,4 +52,4 @@ answer=bin(final_sum)
 if(answer == "0b11111111"):
     print("Accept data.")
 else:
-    print("Discard data.")
+    print("Checksum error detected.")

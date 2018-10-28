@@ -55,4 +55,4 @@ while len(a) > 0:
 if(answer == "000"):
     print("Accept data.")
 else:
-    print("Discard data.")
+    print("CRC error detected.")
