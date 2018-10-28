@@ -1,3 +1,7 @@
+#an implementation of the checksum algorithm
+#by: Rayven Ingles, BSCS 4
+#completed as a lab exercise for CMSC 137
+
 ### function to check for input
 def check_input(input_string) :
     input_string = input_string.replace(" ", "")

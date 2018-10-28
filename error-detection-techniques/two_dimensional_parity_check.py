@@ -1,3 +1,7 @@
+#an implementation of the 2d parity check
+#by: Rayven Ingles, BSCS 4
+#completed as a lab exercise for CMSC 137
+
 def check_input(input_string) :
     ###loop through input string###
     for character in input_string:
@@ -14,13 +18,6 @@ while len(a) != 45:
     print("Input must be a 45-bit string!")
     a = input("> Data: ")
     check_input(a)
-###test print
-### print(a[0:8],"parity:",a[9])
-### print(a[9:17],"parity:",a[18])
-### print(a[18:26],"parity:",a[27])
-### print(a[27:35],"parity:",a[36])
-### print(a[36:44],"parity:",a[44])
-###
 ###error calculation###
 error_count = 0
 ###row parity calculation###
@@ -45,5 +42,4 @@ for character in b:
         column_one_count += 1
 if column_one_count % 2 == 1:
     error_count += 1
-
 print("Error count: ", error_count)

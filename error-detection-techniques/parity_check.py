@@ -1,3 +1,7 @@
+#an implementation of the single-dimensional parity check
+#by: Rayven Ingles, BSCS 4
+#completed as a lab exercise for CMSC 137
+
 def check_input(input_string) :
     ###loop through input string###
     for character in input_string:
