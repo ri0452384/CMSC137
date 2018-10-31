@@ -21,37 +21,16 @@ while len(a) != 45:
 ###error calculation starts here###
 error_count = 0
 #row parity calculations
-row_parity = 0
-for character in a[0:9]:
-    if character == "1":
-        row_parity += 1
-if row_parity % 2 == 1:
-    error_count += 1
-
-row_parity = 0
-for character in a[9:18]:
-    if character == "1":
-        row_parity += 1
-if row_parity % 2 == 1:
-    error_count += 1
-
-for character in a[18:27]:
-    if character == "1":
-        row_parity += 1
-if row_parity % 2 == 1:
-    error_count += 1
-
-for character in a[27:36]:
-    if character == "1":
-        row_parity += 1
-if row_parity % 2 == 1:
-    error_count += 1
-
-for character in a[36:45]:
-    if character == "1":
-        row_parity += 1
-if row_parity % 2 == 1:
-    error_count += 1
+for j in range (0,5):
+    row_parity = 0
+    #b=""
+    for i in range(0,9):
+        #b+=a[9*j+i]
+        if a[9*j+i] == "1":
+            row_parity += 1
+    #print(b)
+    if row_parity % 2 == 1:
+        error_count += 1
 
 ###column parity calculations###
 for j in range(0,9):
@@ -61,7 +40,7 @@ for j in range(0,9):
         #b+= a[i*9+j]
         if a[i*9+j] == "1":
             column_parity += 1
-    print(b)
+    #print(b)
     if column_parity % 2 == 1:
         error_count += 1
 
